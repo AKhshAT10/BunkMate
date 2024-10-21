@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bunk_Mate></title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <style>
+            html{
+                background-color: black;   
+            }
+         .name{
+            font-size: xx-large;
+            color: white;
+            font-weight: bolder;
+            font-family: 'Oswald';   
+         }
+         
+        
+         
+         .profile{
+            position: absolute;
+            top: 20px;
+            right: 22px;
+        
+            
+            
+         }
+         .greetings{
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            font-size: 50px;
+            color: white;
+            font-family: 'DM Sans';
+            font-weight: bold;
+            overflow: hidden; 
+            border-right: .15em solid orange; 
+            white-space: nowrap; 
+            margin: 0 auto; 
+            letter-spacing: .15em;
+            animation: 
+            typing 3.5s steps(40, end),
+            blink-caret .75s step-end infinite
+        }
+        @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+        }
+
+
+        @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange; }
+        }
+         .sphere-info{
+            color: white;
+            position: absolute;
+            top: 350px;
+            left: 193px;
+            font-size: 40px;
+         }
+         .three{
+            display: flex;
+            justify-content: center; 
+            align-items: center;      
+            margin-bottom: 10px
+              
+         }
+         .btn{
+            position: absolute;
+            height: 50px;
+            left: 1250px;
+            top: 10px;
+            background-color: black;
+            color: white;
+            font-family: 'DM Sans';
+            font-size: large;
+            border-color: white;
+         }
+         .Table-1{
+            
+            position: absolute;
+            top: 300px;
+            left: 200px;
+            font-size: large;
+            font-family: 'DM Sans';
+
+         }
+         .Table-2{
+            position: absolute;
+            top: 300px;
+            left: 900px;
+            font-size: large;
+            font-family: 'DM Sans';
+         }
+         .listitem{
+            color: white;
+         }
+         .listitem1{
+            color: white;
+         }
+         .footer{
+            position: absolute;
+
+         }
+
+
+
+
+        </style>
+     <div class="container">
+      <div class="name">BunkMate.
+
+        
+      </div>
+      
+      <div class="profile">👤</div>
+      <div class="greetings">Welcome Back , Akhshat 👋🔥</div>
+      <div class="Alert">
+        <button class="btn"> Below 75% Subjects</button>
+    </div>
+
+
+
+
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    // Set up the scene, camera, and renderer
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // Create the geometry and material for the sphere
+    const geometry = new THREE.SphereGeometry(3, 32, 32); // Radius, width segments, height segments
+    const material = new THREE.MeshBasicMaterial({ color: 0x202020, wireframe: true });
+    const sphere = new THREE.Mesh(geometry, material);
+    scene.add(sphere);
+
+    // Position the camera
+    camera.position.z = 5;
+
+    // Create an animation loop
+    function animate() {
+      requestAnimationFrame(animate);
+      
+      // Rotate the sphere for effect
+      sphere.rotation.x += 0.01;
+      sphere.rotation.y += 0.01;
+
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // Adjust the canvas size when the window is resized
+    window.addEventListener('resize', () => {
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+     
+    <div class="Table-1">
+        <ol>
+            <li class="listitem">Programming For Problem Solving(PPS)</li>
+            <li class="listitem">Calculus And Linear Algebra(CLA)</li>
+            <li class="listitem">Introduction To Computational Biology(ICB)</li>
+            <li class="listitem">Semiconductor Physics and Computational Methods(SPCM)</li>
+            <li class="listitem">Commucative English(CE)</li>
+            <li class="listitem">Basic Civil and Mechanical Workshop(BCMW)</li>
+            <li class="listitem">NSO</li>
+            <li class="listitem">Professional Skills and Practices(PSP)</li>
+            <li class="listitem">Philosophy of Engineering(PE)</li>
+        </ol>
+    </div>
+    <div class="Table-2">
+        <ol>
+            <li class="listitem1">Present/Absent/bunk
+                72.4/73.3/70
+            </li>
+            <li class="listitem1">Current/Attend/bunk
+                72.4/73.3/70
+            </li>
+            <li class="listitem1">Current/Attend/bunk
+                72.4/73.3/70
+            </li>
+            <li class="listitem1">Current/Attend/bunk
+                72.4/73.3/70
+            </li>
+            <li class="listitem1">Current/Attend/bunk
+                72.4/73.3/70
+            </li>
+            <li class="listitem1">Current/Attend/bunk
+                72.4/73.3/70
+            </li>
+            <li class="listitem1">Current/Attend/bunk
+                72.4/73.3/70
+            </li>
+            <li class="listitem1">Current/Attend/bunk
+                72.4/73.3/70
+            </li>
+        </ol>
+    </div>
+    
+    <footer class="footer">
+        <p>©Bunk_Mate.</p>
+        <p class="insta">Instagram</p>
+        <p class="linkedin">LinkedIn</p>
+        <p class="twitter">X</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+     </div>
+
+
+
+
+
+
+    </body>
+</html>
